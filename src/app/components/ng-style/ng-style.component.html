@@ -38,9 +38,10 @@
 <br>
 <hr class="divider">
 
+<p> testing asyncronous behavior with ngclass, ngClick, ngIf </p>
 
-<button (click)="asyncProcess()" type="button" class="btn btn-default" [disabled]="loading">
+<button (click)="asyncProcess()" type="button" class="btn btn-default" [ngClass]="{'btn-success': !loading, 'btn-primary': loading}" [disabled]="loading">
 <i class="fas" [ngClass]="{'fa-save': !loading, 'fa-spin fa-sync-alt': loading}"></i>
-<span *ngIf="loading">Espere por favor</span>
-<span *ngIf="!loading">Guardar cambios</span>
+<span *ngIf="loading"> Espere por favor</span>
+<span *ngIf="!loading"> Guardar cambios</span>
 </button>
