@@ -1,0 +1,33 @@
+<p style="font-size: 10px;">
+    ng-style works!
+</p>
+
+<p [ngStyle]="{'font-size': '20px'}"> using ngStyle with firts </p>
+
+<!-- using data binding with sizeWords -->
+<p [style.fontSize.px]="sizeWords"> using ngStyle with this notation 2 </p>
+<!-- no support operators like +=, -=, *=, etc -->
+<button type="button" class="btn btn-outline-primary" (click)="sizeWords = sizeWords + 5">aumenta la fuenta en 5px</button>
+
+<button type="button" class="btn btn-secondary" (click)="sizeWords = sizeWords - 5 "> disminuye la fuenta en 5px</button>
+
+
+<hr class="divider">
+<!-- using ngClass -->
+<button type="button" name="" id="" [ngClass]="'btn-primary'" class="btn btn-block"> TEST NgClass</button>
+
+<hr class="divider">
+<!-- using data binding with events for itms -->
+<div name="" id="" [ngClass]="addAlert" class="btn btn-block"> TEST NgClass using data Binding</div>
+
+<br>
+<button type="button" class="btn btn-info" (click)="addAlert=' alert-info'"> chance class to alert-INFO</button>
+
+<button type="button" class="btn btn-success" (click)="addAlert=' alert-success'"> chance class to alert-SUCCESS</button>
+<br>
+<br>
+<br>
+<!-- using ng class with condition for style using data binding -->
+<h3 [ngClass]="{'text-danger': textProperties.style, 'text-info': !textProperties.style}">
+    probando ngClass with Objects
+</h3>
