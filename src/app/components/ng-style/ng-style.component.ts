@@ -10,7 +10,7 @@ export class NgStyleComponent implements OnInit {\
   sizeWords = 60;
   addAlert: string = 'alert-danger';
   textProperties: Object = {
-    style: false
+    style: true
   };
 
   constructor() { }

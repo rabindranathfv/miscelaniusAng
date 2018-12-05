@@ -21,9 +21,9 @@
 <div name="" id="" [ngClass]="addAlert" class="btn btn-block"> TEST NgClass using data Binding</div>
 
 <br>
-<button type="button" class="btn btn-info" (click)="addAlert=' alert-info'"> chance class to alert-INFO</button>
+<button type="button" class="btn btn-info" (click)="addAlert=' alert-info'"> change class to alert-INFO</button>
 
-<button type="button" class="btn btn-success" (click)="addAlert=' alert-success'"> chance class to alert-SUCCESS</button>
+<button type="button" class="btn btn-success" (click)="addAlert=' alert-success'"> change class to alert-SUCCESS</button>
 <br>
 <br>
 <br>
@@ -31,3 +31,5 @@
 <h3 [ngClass]="{'text-danger': textProperties.style, 'text-info': !textProperties.style}">
     probando ngClass with Objects
 </h3>
+
+<button type="button" class="btn" (click)="textProperties.style = !textProperties.style" [ngClass]="{'text-danger': textProperties.style, 'text-info': !textProperties.style}"> change ngClass by conditions </button>
