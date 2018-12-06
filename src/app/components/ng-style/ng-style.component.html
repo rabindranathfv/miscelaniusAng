@@ -51,3 +51,23 @@
 <hr class="divider">
 
 <p [appTitleDecorator]="'red'"> Custom directives </p>
+
+<br>
+<hr class="divider">
+
+<p> Using ngSwitch </p>
+
+<span [ngSwitch]="alert">
+<p class="alert alert-success" role="alert" *ngSwitchCase="'success'">
+    Success
+</p>
+<p class="alert alert-info" role="alert" *ngSwitchCase="'info'">
+    Info
+</p>
+<p class="alert alert-warning" role="alert" *ngSwitchCase="'warning'">
+    Warning
+</p>
+<p class="alert alert-danger" role="alert" *ngSwitchDefault>
+    Danger
+</p>
+</span>

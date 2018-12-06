@@ -13,6 +13,8 @@ export class NgStyleComponent implements OnInit {
     style: true
   };
 
+  alert = 'warning';
+
   loading = false;
   constructor() { }
 
