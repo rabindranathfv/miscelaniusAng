@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './ng-style.component.html',
   styleUrls: ['./ng-style.component.css']
 })
-export class NgStyleComponent implements OnInit {\
+export class NgStyleComponent implements OnInit {
 
   sizeWords = 60;
   addAlert = 'alert-danger';
