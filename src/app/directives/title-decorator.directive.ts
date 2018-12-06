@@ -1,5 +1,7 @@
 import { Directive, ElementRef, HostListener, Input } from '@angular/core';
-
+// import ElementRef for get data of a element who have the directive
+// import HostLiestener for trigger events for the specific tag
+// import Input for enter data
 @Directive({
   selector: '[appTitleDecorator]'
 })
@@ -13,10 +15,16 @@ export class TitleDecoratorDirective {
 
   @HostListener('mouseenter') mouseEnter() {
     console.log(this.color);
-    this.elementRef.nativeElement.style.backgroundColor = this.color;
+    // using optional value or this.color if not get by default 'yellow'
+    this.specificColor( this.color || 'yellow');
   }
 
   @HostListener('mouseleave') mouseLeave() {
-    this.elementRef.nativeElement.style.backgroundColor = null;
+    console.log('salio el mouse');
+    this.specificColor( null );
+  }
+
+  private specificColor( color: string  ) {
+    this.elementRef.nativeElement.style.backgroundColor = color;
   }
 }
