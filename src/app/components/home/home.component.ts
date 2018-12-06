@@ -5,7 +5,8 @@ import { Component, OnInit, OnChanges, DoCheck, AfterContentInit, AfterContentCh
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit, OnChanges, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
+export class HomeComponent implements OnInit, OnChanges, DoCheck, AfterContentInit, AfterContentChecked,
+ AfterViewInit, AfterViewChecked, OnDestroy {
 
   constructor() {
     console.log(`constructor`);
